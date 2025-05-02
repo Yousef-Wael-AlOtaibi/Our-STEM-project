@@ -20,16 +20,16 @@ html,body{
 .hidden{
     display:none !important;
 }
-.selector-btn,#back-btn{
+.selector-btn{
     color:white;
     width:25%;
     height:80%;
     background-color: rgb(19, 18, 18);
     margin:auto;
-    font-size: 150%;
+    font-size: 1.5rem;
     text-align: center;
 }
-#selector-btns{
+#selector-btns-container{
     border:1px solid black;
     height:20%;
     width:80%;
@@ -48,7 +48,7 @@ html,body{
     width:100%;
     height:auto;
     text-align: center;
-    font-size: 250%;
+    font-size: 2.5rem;
 }
 #idea,#steps,#results{
     display: flex;
@@ -66,9 +66,9 @@ html,body{
     justify-content: center;
     align-items: center;
     border:1px solid white;
-    gap:10%;
-    padding:2%;
-    font-size:200%;
+    gap:1.5em;
+    padding:0.2rem;
+    font-size:2rem;
     scroll-behavior: smooth;
     margin:auto;
     margin-top:5%;
@@ -81,7 +81,42 @@ html,body{
     height:20%;
     background-color: red;
     color:white;
-    font-size:150%;
+    font-size:1.5rem;
     text-align: center;
     display: inline;
+}
+@media(max-width:360px){
+    html{
+        font-size:14px;
+    }
+}
+@media(max-width:480px){
+    html{
+        font-size:14.5px;
+    }
+}
+@media(max-width:600px){
+    html{
+        font-size:15px;
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size:15.5px;
+    }
+}
+@media(max-width:922px){
+    html{
+        font-size:16px;
+    }
+}
+@media(max-width:1200px){
+    html{
+        font-size:16.5px;
+    }
+}
+@media(max-width:1201px){
+    html{
+        font-size:17px;
+    }
 }
