@@ -1,0 +1,87 @@
+html,body{
+    width:100%;
+    height:100%;
+    background: linear-gradient(
+        180deg,
+        black,
+        grey,
+        black
+    );
+    color:white;
+}
+*,::after,*::before{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+*::-webkit-scrollbar{
+    width: 0;
+}
+.hidden{
+    display:none !important;
+}
+.selector-btn,#back-btn{
+    color:white;
+    width:25%;
+    height:80%;
+    background-color: rgb(19, 18, 18);
+    margin:auto;
+    font-size: 150%;
+    text-align: center;
+}
+#selector-btns{
+    border:1px solid black;
+    height:20%;
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        90deg,
+        black,
+        grey,
+        grey,
+        black);
+        margin:auto;
+}
+#title{
+    width:100%;
+    height:auto;
+    text-align: center;
+    font-size: 250%;
+}
+#idea,#steps,#results{
+    display: flex;
+    width:80%;
+    height:50%;
+    background: linear-gradient(
+        180deg,
+        black,
+        grey,
+        black
+    );
+    overflow:auto;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border:1px solid white;
+    gap:10%;
+    padding:2%;
+    font-size:200%;
+    scroll-behavior: smooth;
+    margin:auto;
+    margin-top:5%;
+}
+#idea::-webkit-scrollbar{
+    width:0;
+}
+.remove-btn{
+    width:20%;
+    height:20%;
+    background-color: red;
+    color:white;
+    font-size:150%;
+    text-align: center;
+    display: inline;
+}
