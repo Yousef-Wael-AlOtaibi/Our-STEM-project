@@ -9,20 +9,21 @@ html,body{
     );
     color:white;
 }
-*,::after,*::before{
+*,*::after,*::before{
     box-sizing: border-box;
     margin:0;
     padding:0;
+    scroll-behavior: smooth;
 }
 *::-webkit-scrollbar{
-    width: 0;
+    width: 0%;
 }
 .hidden{
     display:none !important;
 }
 .selector-btn{
     color:white;
-    width:25%;
+    width:20%;
     height:80%;
     background-color: rgb(19, 18, 18);
     margin:auto;
@@ -30,7 +31,7 @@ html,body{
     text-align: center;
 }
 #selector-btns-container{
-    border:1px solid black;
+    border:1px solid white;
     height:20%;
     width:80%;
     display: flex;
@@ -43,17 +44,18 @@ html,body{
         grey,
         black);
         margin:auto;
+        z-index: 1;
 }
 #title{
     width:100%;
     height:auto;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
 }
-#idea,#steps,#results,#video{
+.info-box{
     display: flex;
     width:80%;
-    height:50%;
+    height:auto;
     background: linear-gradient(
         180deg,
         black,
@@ -63,24 +65,23 @@ html,body{
     overflow:auto;
     text-align: center;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     border:1px solid white;
     gap:1.5em;
-    padding:0.2rem;
-    font-size:2rem;
+    font-size:3rem;
     scroll-behavior: smooth;
-    margin:auto;
-    margin-top:5rem;
+    margin:5rem auto;
     position: relative;
-    padding-top:4rem;
+    padding-top:5rem;
+    flex-direction: column;
 }
+
 #idea::-webkit-scrollbar{
     width:0;
 }
 .remove-btn{
-    width:20%;
-    height:20%;
+    width:10vw;
+    height:10vh;
     background-color: red;
     color:white;
     font-size:3rem;
@@ -89,6 +90,24 @@ html,body{
     position: absolute;
     top:0.5rem;
     right:0.5rem;
+}
+#go-back-btn{
+    width:10vw;
+    height:10vh;
+    color:white;
+    background:linear-gradient(
+        180deg,
+        black,
+        grey,
+        black
+    ) ;
+    border-radius: 25%;
+    font-size:2.5rem;
+    text-align: center;
+    position: fixed;
+    bottom:2%;
+
+
 }
 @media(max-width:360px){
     html{
@@ -120,8 +139,8 @@ html,body{
         font-size:16.5px;
     }
 }
-@media(max-width:1201px){
+@media(min-width:1201px){
     html{
-        font-size:17px;
+        font-size:18px;
     }
 }
