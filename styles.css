@@ -1,4 +1,4 @@
-html,body{
+html{
     width:100%;
     height:100%;
     background: linear-gradient(
@@ -9,14 +9,18 @@ html,body{
     );
     color:white;
 }
+body{
+    width: 100%;
+    height:100%;
+}
 *,*::after,*::before{
     box-sizing: border-box;
     margin:0;
     padding:0;
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 *::-webkit-scrollbar{
-    width: 0%;
 }
 .hidden{
     display:none !important;
@@ -62,7 +66,6 @@ html,body{
         grey,
         black
     );
-    overflow:auto;
     text-align: center;
     flex-wrap: wrap;
     align-items: center;
@@ -74,14 +77,15 @@ html,body{
     position: relative;
     padding:5rem 2rem;
     flex-direction: column;
+    overflow: visible;
 }
 
 #idea::-webkit-scrollbar{
     width:0;
 }
 .remove-btn{
-    width:10vw;
-    height:10vh;
+    width:auto;
+    height:auto;
     background-color: red;
     color:white;
     font-size:3rem;
@@ -93,7 +97,7 @@ html,body{
 }
 #go-back-btn{
     width:10vw;
-    height:15vh;
+    height:auto;
     color:white;
     background:linear-gradient(
         180deg,
@@ -106,34 +110,17 @@ html,body{
     text-align: center;
     position: fixed;
     bottom:2.5%;
-    overflow: hidden;
 }
 li:not(li[id='first']){
     padding-top:3rem;
 }
 h2[id='sub-title']{
-    position: absolute;
-    top:0%;
-    text-align: center;
+    margin: auto;
+    display: inline;
 }
-@media(max-width:360px){
+@media(max-width:1200px){
     html{
-        font-size:14px;
-    }
-}
-@media(max-width:480px){
-    html{
-        font-size:14.5px;
-    }
-}
-@media(max-width:600px){
-    html{
-        font-size:15px;
-    }
-}
-@media(max-width:768px){
-    html{
-        font-size:15.5px;
+        font-size:16.5px;
     }
 }
 @media(max-width:922px){
@@ -141,13 +128,23 @@ h2[id='sub-title']{
         font-size:16px;
     }
 }
-@media(max-width:1200px){
+@media(max-width:768px){
     html{
-        font-size:16.5px;
+        font-size:15.5px;
     }
 }
-@media(min-width:1201px){
+@media(max-width:600px){
     html{
-        font-size:18px;
+        font-size:15px;
+    }
+}
+@media(max-width:480px){
+    html{
+        font-size:13.5px;
+    }
+}
+@media(max-width:360px){
+    html{
+        font-size:10px;
     }
 }
