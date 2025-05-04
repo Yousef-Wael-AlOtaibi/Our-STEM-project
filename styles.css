@@ -105,11 +105,16 @@ html,body{
     font-size:4.25rem;
     text-align: center;
     position: fixed;
-    bottom:2%;
+    bottom:2.5%;
     overflow: hidden;
 }
 li:not(li[id='first']){
     padding-top:3rem;
+}
+h2[id='sub-title']{
+    position: absolute;
+    top:0%;
+    text-align: center;
 }
 @media(max-width:360px){
     html{
