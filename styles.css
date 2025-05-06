@@ -28,16 +28,16 @@ body{
 }
 .selector-btn{
     color:white;
-    width:20%;
-    height:80%;
+    width:25%;
+    height:5rem;
     background-color: rgb(19, 18, 18);
-    margin:auto;
     font-size: 1.5rem;
     text-align: center;
+    margin: 1rem;
 }
 #selector-btns-container{
     border:1px solid white;
-    height:20%;
+    height:auto;
     width:80%;
     display: flex;
     align-items: center;
@@ -49,13 +49,14 @@ body{
         grey,
         black);
         margin:auto;
-        z-index: 1;
+        flex-wrap: wrap;
 }
 #title{
     width:100%;
     height:auto;
     text-align: center;
     font-size: 4.5rem;
+    padding-top:30px
 }
 .info-box{
     display: flex;
@@ -112,35 +113,42 @@ body{
     position: fixed;
     bottom:2.5%;
 }
-li:not(li[id='first']){
+li:not(li[class='first']){
     padding-top:3rem;
 }
 h2[id='sub-title']{
     margin: auto;
     display: inline;
 }
-#video{
-    padding:1rem;
-}
 .img{
-    width: fit-content;
-    height:auto;
+    width: 80%;
+    max-width: 300px;
+    height: auto;
     border-radius: 20%;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     border:1px solid black;
-    margin: auto;
-    display: block;
 }
 .img:hover{
-    width: fit-content;
+    width: 80%;
+    max-width: 300px;
     height:auto;
     border-radius: 20%;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     opacity: 0.85;
     border:1px solid black;
-
 }
-
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.visible {
+    opacity: 1;
+}
+.video{
+margin:0;
+padding:1rem;
+border-radius: 20%;
+}
 @media(max-width:1200px){
     html{
         font-size:16.5px;
