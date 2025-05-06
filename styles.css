@@ -21,6 +21,7 @@ body{
     max-width: 100%;
 }
 *::-webkit-scrollbar{
+    width:0;
 }
 .hidden{
     display:none !important;
@@ -70,7 +71,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     border:1px solid white;
-    gap:1.5em;
+    gap:1.5rem;
     font-size:3rem;
     scroll-behavior: smooth;
     margin:5rem auto;
@@ -118,6 +119,28 @@ h2[id='sub-title']{
     margin: auto;
     display: inline;
 }
+#video{
+    padding:1rem;
+}
+.img{
+    width: fit-content;
+    height:auto;
+    border-radius: 20%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    border:1px solid black;
+    margin: auto;
+    display: block;
+}
+.img:hover{
+    width: fit-content;
+    height:auto;
+    border-radius: 20%;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    opacity: 0.85;
+    border:1px solid black;
+
+}
+
 @media(max-width:1200px){
     html{
         font-size:16.5px;
