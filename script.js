@@ -16,16 +16,26 @@ const buttonFunctions = {
     'results-btn':() => {
         document.getElementById('results').classList.remove('hidden')
     },
+    'stem-btn':() => {
+        document.getElementById('stem-education').classList.remove('hidden')
+    },
+    'credits-btn':()=>{
+        document.getElementById('credits').classList.remove('hidden')
+    }
 }
 const relatedButtons = {
     'idea-btn':'remove-idea-btn',
     'steps-btn':'remove-steps-btn',
-    'results-btn':'remove-results-btn'
+    'results-btn':'remove-results-btn',
+    'stem-btn':'remove-stem-btn',
+    'credits-btn':'remove-credits-btn'
 }
 const buttonsAndGoToLocations = {
     'idea-btn': document.getElementById('idea'),
     'steps-btn': document.getElementById('steps'),
-    'results-btn': document.getElementById('results')
+    'results-btn': document.getElementById('results'),
+    'stem-btn': document.getElementById('stem-education'),
+    'credits-btn': document.getElementById('credits')
 }
 selectorBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -48,10 +58,22 @@ goBackBtn.addEventListener('click', () => {
     window.scroll({top:0, behavior:"smooth"})
 })
 window.addEventListener('scroll', () => {
-    if(window.scrollY>0 ){
+    if(window.scrollY>0){
         goBackBtn.classList.remove('hidden');
     }
     else{
         goBackBtn.classList.add('hidden')
     }
 })
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade-in");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(element => observer.observe(element));
+});
