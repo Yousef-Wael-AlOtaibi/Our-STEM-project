@@ -21,6 +21,9 @@ const buttonFunctions = {
     },
     'credits-btn':()=>{
         document.getElementById('credits').classList.remove('hidden')
+    },
+    'concepts-btn':()=>{
+        document.getElementById('key-concepts').classList.remove('hidden')
     }
 }
 const relatedButtons = {
@@ -28,15 +31,18 @@ const relatedButtons = {
     'steps-btn':'remove-steps-btn',
     'results-btn':'remove-results-btn',
     'stem-btn':'remove-stem-btn',
-    'credits-btn':'remove-credits-btn'
+    'credits-btn':'remove-credits-btn',
+    'concepts-btn':'remove-concepts-btn'
 }
 const buttonsAndGoToLocations = {
     'idea-btn': document.getElementById('idea'),
     'steps-btn': document.getElementById('steps'),
     'results-btn': document.getElementById('results'),
     'stem-btn': document.getElementById('stem-education'),
-    'credits-btn': document.getElementById('credits')
+    'credits-btn': document.getElementById('credits'),
+    'concepts-btn': document.getElementById('key-concepts')
 }
+
 selectorBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         const clickedBtnId = document.getElementById(btn.id).id;
