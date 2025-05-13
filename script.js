@@ -6,6 +6,7 @@ const selectorBtnsContainer = document.getElementById('selector-btns-container')
 const goBackBtn = document.getElementById('go-back-btn');
 const removeBtns = document.querySelectorAll('.remove-btn');
 const clearAndShowAllBtn = document.getElementById('clear-btn')
+const toggleACBtn = document.getElementById('ac-btn');
 const buttonFunctions = {
     'idea-btn':() => {
         document.getElementById('idea').classList.remove('hidden');
