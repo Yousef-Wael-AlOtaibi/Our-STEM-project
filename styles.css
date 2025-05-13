@@ -38,7 +38,7 @@ body{
 #selector-btns-container{
     border:1px solid white;
     height:auto;
-    width:80%;
+    width:auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +60,7 @@ body{
 }
 .info-box{
     display: flex;
-    width:80%;
+    width:auto;
     height:auto;
     background: linear-gradient(
         180deg,
@@ -80,6 +80,7 @@ body{
     padding:5rem 2rem;
     flex-direction: column;
     overflow: visible;
+    max-width: 100vw;
 }
 
 #idea::-webkit-scrollbar{
@@ -108,7 +109,7 @@ body{
         black
     ) ;
     border-radius: 25%;
-    font-size:4.25rem;
+    font-size:6rem;
     text-align: center;
     position: fixed;
     bottom:2.5%;
@@ -149,6 +150,9 @@ margin:0;
 padding:1rem;
 border-radius: 20%;
 }
+p{
+    height: auto;
+}
 @media(max-width:1200px){
     html{
         font-size:16.5px;
@@ -177,5 +181,15 @@ border-radius: 20%;
 @media(max-width:360px){
     html{
         font-size:10px;
+    }
+}
+@media(max-width:320px){
+    html{
+        font-size:9.5px;
+    }
+}
+@media(max-width:290px){
+    html{
+        font-size:9px;
     }
 }
